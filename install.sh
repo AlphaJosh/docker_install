@@ -1,3 +1,8 @@
+#rm install.sh
+#wget https://github.com/AlphaJosh/docker_install/edit/main/install.sh
+#chmod +x install.sh
+#./install.sh
+
 
 apt-get install -y software-properties-common apparmor-utils apt-transport-https ca-certificates curl dbus jq network-manager sudo mc dnsutils net-tools wget
 
