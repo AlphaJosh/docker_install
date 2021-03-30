@@ -3,6 +3,9 @@
 #chmod +x install.sh
 #./install.sh
 
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+
+sudo apt install openssh-server -y
 
 apt-get install -y software-properties-common apparmor-utils apt-transport-https ca-certificates curl dbus jq network-manager sudo mc dnsutils net-tools wget
 
