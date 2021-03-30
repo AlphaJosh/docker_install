@@ -3,6 +3,8 @@ services:
   homeassistant:
     container_name: hass_gui
     image: homeassistant/home-assistant:0.98.3
+#    ports:
+#      - "8123:8123"
     volumes:
       - /srv/hass_gui:/config
       - /etc/localtime:/etc/localtime:ro
