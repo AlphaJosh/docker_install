@@ -1,5 +1,5 @@
 #rm install.sh
-#wget https://github.com/AlphaJosh/docker_install/edit/main/install.sh
+#wget https://raw.githubusercontent.com/AlphaJosh/docker_install/main/install.sh
 #chmod +x install.sh
 #./install.sh
 
