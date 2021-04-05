@@ -1,0 +1,13 @@
+systemctl stop hassio-supervisor  && systemctl disable hassio-supervisor
+
+docker stop homeassistant
+docker rm homeassistant
+docker stop hassio_supervisor
+docker rm hassio_supervisor
+
+rm /etc/hassio.json
+rm /etc/systemd/system/hassio-*
+rm -r /usr/share/hassio
+
+docker ps |grep "homeassistant/" |awk '{print $1}' | xargs docker rm -f
+docker images |grep "homeassistant/" | awk '{print $3}'| xargs docker rmi
