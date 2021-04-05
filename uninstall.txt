@@ -1,4 +1,7 @@
-systemctl stop hassio-supervisor  && systemctl disable hassio-supervisor
+# MUST BE DONE - Or it restarts the containers while you are trying to delete
+systemctl stop hassio-supervisor 
+
+systemctl disable hassio-supervisor
 
 docker stop homeassistant
 docker rm homeassistant
@@ -11,3 +14,6 @@ rm -r /usr/share/hassio
 
 docker ps |grep "homeassistant/" |awk '{print $1}' | xargs docker rm -f
 docker images |grep "homeassistant/" | awk '{print $3}'| xargs docker rmi
+
+docker ps |grep "esphome/" |awk '{print $1}' | xargs docker rm -f
+docker images |grep "esphome/" | awk '{print $3}'| xargs docker rmi
