@@ -4,6 +4,8 @@
 curl -Lo installer.sh https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh
 bash installer.sh -d /var/hassio
 
+cd /var/hassio/homeassistant
+
 # Install HACS
 wget -q -O - https://install.hacs.xyz | bash -
 
