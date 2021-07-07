@@ -12,8 +12,14 @@ rm /etc/hassio.json
 rm /etc/systemd/system/hassio-*
 rm -r /usr/share/hassio
 
-docker ps |grep "homeassistant/" |awk '{print $1}' | xargs docker rm -f
-docker images |grep "homeassistant/" | awk '{print $3}'| xargs docker rmi
+docker ps |grep "homeassistant" |awk '{print $1}' | xargs docker rm -f
+docker images |grep "homeassistant" | awk '{print $3}'| xargs docker rmi
 
-docker ps |grep "esphome/" |awk '{print $1}' | xargs docker rm -f
-docker images |grep "esphome/" | awk '{print $3}'| xargs docker rmi
+docker ps |grep "hassio" |awk '{print $1}' | xargs docker rm -f
+docker images |grep "hassio" | awk '{print $3}'| xargs docker rmi
+
+docker ps |grep "esphome" |awk '{print $1}' | xargs docker rm -f
+docker images |grep "esphome" | awk '{print $3}'| xargs docker rmi
+
+docker container prune
+docker image prune -a
