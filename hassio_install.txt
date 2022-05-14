@@ -11,4 +11,5 @@ wget -q -O - https://install.hacs.xyz | bash -
 
 # Disable Insecure secrets in core_samba etc
 ha resolution check options --enabled=false addon_pwned
+ha jobs options --ignore-conditions healthy
 ha host reboot
